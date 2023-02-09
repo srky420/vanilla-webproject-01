@@ -18,22 +18,19 @@ html, body {
     left: 0;
     right: 0;    
     overflow: auto;
-    background: linear-gradient(black, rgb(34, 34, 34))
+    background: linear-gradient(rgb(12, 12, 12), rgb(34, 34, 34))
 }
 
 /* NAVBAR */
 
 .navbar {
     display: flex;
-    color: white;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    margin-top: 1%;
 }
 
 .nav-left {
-    display: flex;
-    align-items: center;
     width: 50%;
 }
 
@@ -44,7 +41,7 @@ html, body {
 .nav-list {
     display: flex;
     justify-content: right;
-    margin-right: 20%;
+    margin-right: 25%;
 }
 
 .nav-link {
@@ -58,11 +55,11 @@ html, body {
     color: white;
     font-family: 'Signika', sans-serif;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .nav-link a:hover {
-    color: blueviolet;
+    color: darkviolet;
 }
 
 .nav-link:hover {
@@ -70,7 +67,7 @@ html, body {
 }
 
 .nav-left img {
-    margin-left: 10%;
+    margin-left: 25%;
     width: 40px;
     transition: .2s;
 }
@@ -82,12 +79,19 @@ html, body {
 
 /* BANNER */
 
+/* Banner Left */
 .banner {
-    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.banner-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin: 8% 0;
+    width: 60%;
 }
 
 .banner-title {
@@ -100,32 +104,31 @@ html, body {
 #r {
     opacity: 0;
     animation: drop 0.2s linear forwards 0.2s;
-    color: purple;
+    color: darkviolet;
     padding: 0px 10px;    
     font-size: 80px;
 }
 
 #a {
     opacity: 0;
-    animation: drop 0.4s linear forwards 0.4s;
+    animation: drop 0.3s linear forwards 0.4s;
     padding: 0px 10px;
     font-size: 60px;
 }
 
 #s {
     opacity: 0;
-    animation: drop 0.4s linear forwards 0.6s;
+    animation: drop 0.3s linear forwards 0.6s;
     padding: 0px 10px;
     font-size: 60px;
 }
 
 #p {
     opacity: 0;
-    animation: drop 0.4s linear forwards 0.8s;
+    animation: drop 0.3s linear forwards 0.8s;
     padding: 0px 10px;    
     font-size: 60px;
 }
-
 
 @keyframes drop {
     0% {
@@ -153,14 +156,14 @@ html, body {
 
 .banner-text {
     opacity: 0;
-    animation: text-appear 0.2s linear forwards 1s;
-    width: 50%;
+    animation: text-appear 0.2s linear forwards 0.9s;
     text-align: center;
+    margin: 0 10%;
 }
 
 @keyframes text-appear {
     0% {
-        transform: translateX(-50px);
+        transform: translateX(-25px);
         opacity: 0;
     }
  
@@ -180,8 +183,54 @@ html, body {
     }
 }
 
+.banner-btn {
+    opacity: 0;
+    margin-top: 20px;
+    filter: drop-shadow(-5px 5px 0 black);
+    animation: fade-in 0.5s linear forwards 1s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Banner Right */
+.banner-right {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+    width: 40%;
+}
+
+.banner-block {
+    margin: 10% 0;
+    width: 500px;
+    height: 300px;
+    border: 5px solid white;
+}
 
 
+/* BLOCKS */
+
+.block {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-content {
+    width: 50%;
+}
+
+
+/* GLOBAL */
 
 .text {
     color: white;
@@ -192,4 +241,32 @@ html, body {
 
 .text-lg {
     font-size: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Signika', sans-serif;
+    border: 0;
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: blueviolet;
+    color: white;
 }
