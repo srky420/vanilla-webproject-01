@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+/* NAVBAR */
+
 .navbar {
     display: flex;
     background-color: black;
@@ -13,6 +15,8 @@
 }
 
 .nav-left {
+    display: flex;
+    align-items: center;
     width: 50%;
 }
 
@@ -23,27 +27,44 @@
 .nav-list {
     display: flex;
     justify-content: right;
-    margin-right: 10%;
+    margin-right: 20%;
 }
 
 .nav-link {
     list-style: none;
-    padding: 0px 20px;
+    transition: .2s;
+    margin: 0px 25px;
 }
 
 .nav-link a {
     text-decoration: none;
     color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
     font-size: 20px;
-    transition: .2s font-size;
-
 }
 
 .nav-link a:hover {
     color: blueviolet;
-    font-size: 25px;
 }
 
+.nav-link:hover {
+    transform: scale(1.1);
+}
 
+.nav-left img {
+    margin-left: 10%;
+    width: 5%;
+    transition: .2s;
+}
+
+.nav-left img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* BANNER */
+
+.banner {
+    height: 40vh;
+}
