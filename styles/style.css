@@ -152,7 +152,7 @@ html, body {
     opacity: 0;
     animation: text-appear 0.2s linear forwards 1s;
     text-align: center;
-    margin: 0 10%;
+    margin: 0 50px;
 }
 
 .banner-btn {
@@ -170,9 +170,10 @@ html, body {
 }
 
 .banner-block {
-    margin: 10% 0;
+    margin: 50px 0;
     width: 500px;
     height: 300px;
+    overflow: hidden;
     filter: drop-shadow(5px 5px 0 black);
 }
 
@@ -360,3 +361,5 @@ html, body {
     background-color: blueviolet;
     transform: scale(1);
 }
+
+/* MEDIA QUERY */
