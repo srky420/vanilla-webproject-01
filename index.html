@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./scripts/script.js"></script>
     <title>Vanilla Project 1</title>
 </head>
 <body>
@@ -50,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow">
+            <div class="arrow" onclick="gotoIDLink('#section-1')">
                 <p class="arrow-text text text-lg">Learn more</p>
                 <div class="arrow-down"></div>
             </div>
@@ -59,18 +60,31 @@
        
     
         <!-- Blocks -->
-        <div class="block-section">
+        <section id="section-1" class="block-section">
             <div class="block">
                 <div class="block-content">
-                    <p class="text text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iure quia, ut, provident iusto, et asperiores quasi suscipit quibusdam ipsa tenetur blanditiis aperiam iste doloribus? Tempore voluptatibus odit consectetur sequi.</p>
+                    <p class="text text-lg text-center hidden">This is a section of content, Please fill this with content! </p>
                 </div>
             </div>
             
-            <div class="arrow">
+            <div class="arrow hidden">
                 <p class="arrow-text text text-lg">Interested?</p>
                 <div class="arrow-down"></div>
             </div>
-        </div>
+        </section>
+
+        <section id="section-2" class="block-section">
+            <div class="block">
+                <div class="block-content">
+                    <p class="text text-lg text-center hidden">This is a section of content, Please fill this with content! </p>
+                </div>
+            </div>
+            
+            <div class="arrow hidden">
+                <p class="arrow-text text text-lg">Interested?</p>
+                <div class="arrow-down"></div>
+            </div>
+        </section>
     </div>
 
 </body>

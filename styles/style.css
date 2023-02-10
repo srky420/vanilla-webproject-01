@@ -7,6 +7,7 @@
 
 html, body {
     height: 100%;
+    scroll-behavior: smooth !important;
 }
 
 /* WRAPPER */
@@ -102,6 +103,7 @@ html, body {
     display: flex;
     justify-content: center;
     height: 100%;
+    clear: both;
 }
 
 .banner-left {
@@ -177,7 +179,8 @@ html, body {
     filter: drop-shadow(5px 5px 0 black);
 }
 
-/* Arrow */
+
+/* ARROW */
 .arrow {
     display: flex;
     flex-direction: column;
@@ -186,12 +189,10 @@ html, body {
     width: fit-content;
     margin: auto;
     padding-bottom: 150px;
-    overflow: hidden;
 }
 
 .arrow:hover {
     cursor: pointer;
-    transform: scale(1.1);
 }
 
 .arrow-text {
@@ -219,6 +220,8 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    margin: 5% 0;
+    clear: both;
 }
 
 .block {
@@ -232,6 +235,16 @@ html, body {
     width: 50%;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 0.4s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* KEYFRAMES */
 
