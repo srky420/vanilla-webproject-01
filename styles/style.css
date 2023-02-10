@@ -62,8 +62,16 @@ html, body {
     color: darkviolet;
 }
 
+.nav-left a:active {
+    color: blueviolet;
+}
+
 .nav-link:hover {
     transform: scale(1.1);
+}
+
+.nav-link:active {
+    transform: scale(1);
 }
 
 .nav-left img {
@@ -75,6 +83,10 @@ html, body {
 .nav-left img:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.nav-left img:active {
+    transform: scale(1);
 }
 
 /* BANNER */
@@ -103,7 +115,7 @@ html, body {
 
 #r {
     opacity: 0;
-    animation: drop 0.2s linear forwards 0.2s;
+    animation: drop 0.2s linear forwards 0.3s;
     color: darkviolet;
     padding: 0px 10px;    
     font-size: 80px;
@@ -130,6 +142,50 @@ html, body {
     font-size: 60px;
 }
 
+.banner-text {
+    opacity: 0;
+    animation: text-appear 0.2s linear forwards 1s;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.banner-btn {
+    opacity: 0;
+    margin-top: 20px;
+    animation: fade-in 0.5s linear forwards 1s;
+}
+
+/* Banner Right */
+.banner-right {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+    width: 40%;
+}
+
+.banner-block {
+    margin: 10% 0;
+    width: 500px;
+    height: 300px;
+}
+
+
+/* BLOCKS */
+
+.block {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-content {
+    width: 50%;
+}
+
+
+/* KEYFRAMES */
+
 @keyframes drop {
     0% {
         transform: translateY(-500px);
@@ -154,13 +210,6 @@ html, body {
     
 }
 
-.banner-text {
-    opacity: 0;
-    animation: text-appear 0.2s linear forwards 0.9s;
-    text-align: center;
-    margin: 0 10%;
-}
-
 @keyframes text-appear {
     0% {
         transform: translateX(-25px);
@@ -183,13 +232,6 @@ html, body {
     }
 }
 
-.banner-btn {
-    opacity: 0;
-    margin-top: 20px;
-    filter: drop-shadow(-5px 5px 0 black);
-    animation: fade-in 0.5s linear forwards 1s;
-}
-
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -198,35 +240,6 @@ html, body {
     100% {
         opacity: 1;
     }
-}
-
-/* Banner Right */
-.banner-right {
-    display: flex;
-    justify-content: center;
-    margin: 3% 0;
-    width: 40%;
-}
-
-.banner-block {
-    margin: 10% 0;
-    width: 500px;
-    height: 300px;
-    border: 5px solid white;
-}
-
-
-/* BLOCKS */
-
-.block {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.block-content {
-    width: 50%;
 }
 
 
@@ -263,10 +276,17 @@ html, body {
     font-family: 'Signika', sans-serif;
     border: 0;
     border-radius: 0;
+    filter: drop-shadow(-5px 5px 0 black);
     transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: blueviolet;
+    background-color: darkviolet;
     color: white;
+    transform: scale(1.1);
+}
+
+.btn:active {
+    background-color: blueviolet;
+    transform: scale(1);
 }
