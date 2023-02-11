@@ -86,10 +86,10 @@ html, body {
 .banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-end: span 2;    
-    gap: 5rem;
+    gap: 2rem;
     place-items: center;
-    height: 100vh;
+    justify-content: center;
+    height: 90vh;
 }
 
 .banner-main {
@@ -145,9 +145,9 @@ html, body {
     animation: fade-in 0.5s linear forwards 1s;
 }
 
-.banner-block {
-    width: 500px;
-    height: 300px;
+.banner-embed {
+    width: 360px;
+    height: 240px;
     filter: drop-shadow(5px 5px 0 black);
 }
 
@@ -162,6 +162,7 @@ html, body {
     gap: 3rem;
     place-items: center;
     justify-content: center;
+    align-self: self-end;
     transition: 0.2s all;
 }
 
@@ -195,10 +196,6 @@ html, body {
     justify-content: center;
     min-height: 100vh;
     grid-template-columns: minmax(50%, 50%);
-}
-
-.content-section p {
-    padding: 0 10%;
 }
 
 .hidden {
