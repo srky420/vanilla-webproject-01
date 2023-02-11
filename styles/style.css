@@ -22,12 +22,28 @@ html, body {
     background: linear-gradient(rgb(19, 17, 29), rgb(34, 34, 34))
 }
 
+/* CONTAINER */
+
+.container {
+    margin: 0 5%;
+}
+
 /* NAVBAR */
 
 .navbar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    place-items: center;
+}
+
+.nav-left {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    place-self: start;
+}
+
+.nav-right {
+    align-self: center;
+    justify-self: center;
 }
 
 .nav-list {
@@ -88,8 +104,7 @@ html, body {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     place-items: center;
-    justify-content: center;
-    height: 90vh;
+    height: 88vh;
 }
 
 .banner-main {
@@ -146,8 +161,9 @@ html, body {
 }
 
 .banner-embed {
-    width: 360px;
-    height: 240px;
+    width: 362px;
+    height: 242px;
+    border: 2px solid black;
     filter: drop-shadow(5px 5px 0 black);
 }
 
@@ -161,7 +177,6 @@ html, body {
     display: grid;
     gap: 3rem;
     place-items: center;
-    justify-content: center;
     align-self: self-end;
     transition: 0.2s all;
 }
@@ -174,6 +189,7 @@ html, body {
     opacity: 0;
     padding: 10px;
     background-color: darkviolet;
+    border: 2px solid black;
     filter: drop-shadow(-1px 4px 0 black);
     animation: fade-in 0.2s linear forwards 0.8s;
 }
@@ -188,6 +204,7 @@ html, body {
     animation: jump 0.8s linear forwards 0.8s infinite;
 }
 
+
 /* BLOCKS */
 
 .content-section {
@@ -195,7 +212,19 @@ html, body {
     align-items: end;
     justify-content: center;
     min-height: 100vh;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: minmax(50%, 50%);
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section p {
+    margin: 10px 0;
 }
 
 .hidden {
@@ -313,6 +342,25 @@ html, body {
 
 .text-end {
     text-align: end;
+}
+
+.heading {
+    padding: 10px 20px;
+    font-size: 40px;
+    border: 2px solid black;
+    filter: drop-shadow(1px 5px 0 black);
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.text-dark {
+    color: black;
 }
 
 .btn {
