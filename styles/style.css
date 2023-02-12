@@ -13,6 +13,7 @@ html, body {
 /* WRAPPER */
 
 .wrapper {
+    scroll-behavior: smooth;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -172,10 +173,11 @@ html, body {
 .arrow {
     grid-column: span 2;
     display: grid;
-    gap: 3rem;
+    gap: 3em;
     place-items: center;
     align-self: self-end;
     transition: 0.2s all;
+    
 }
 
 .arrow:hover {
@@ -189,7 +191,7 @@ html, body {
     background-color: darkviolet;
     border: 2px solid black;
     filter: drop-shadow(-1px 4px 0 black);
-    animation: fade-in 0.2s linear forwards 0.8s;
+    animation: fade-in 0.2s linear forwards 1s;
 }
 
 .arrow-shape {
