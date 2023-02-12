@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@600&family=Ubuntu:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Signika:wght@600&family=Ubuntu:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -23,48 +23,48 @@ html, body {
 }
 
 /* CONTAINER */
-
+/*
 .container {
-    margin: 0 5%;
+    margin: 0 10%;
 }
-
+*/
 /* NAVBAR */
 
 .navbar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
+    display: flex;
 }
 
 .nav-left {
-    margin: 1em 0;
-    margin-left: 5em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1em 1em;
+    width: 50%;
+    
 }
 
 .nav-right {
-    align-self: center;
-    justify-self: center;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 2em;
+    width: 50%;
 }
 
 .nav-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    gap: 2rem;
+    display: flex;
 }
 
 .nav-link {
     list-style: none;
     transition: .2s;
+    margin: 0 1rem;
 }
 
 .nav-link a {
     text-decoration: none;
     color: white;
-    font-family: 'Signika', sans-serif;
-    font-weight: bolder;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .nav-link a:hover {
@@ -103,7 +103,6 @@ html, body {
 .banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2%;
     place-items: center;
     height: 88vh;
 }
@@ -158,7 +157,7 @@ html, body {
 
 .banner-btn {
     opacity: 0;
-    animation: fade-in 0.5s linear forwards 1s;
+    animation: fade-in 0.5s linear forwards 1.1s;
 }
 
 .banner-embed {
@@ -170,11 +169,8 @@ html, body {
 
 /* ARROW */
 
-.arrow-banner {
-    grid-column: span 2;
-}
-
 .arrow {
+    grid-column: span 2;
     display: grid;
     gap: 3rem;
     place-items: center;
@@ -184,6 +180,7 @@ html, body {
 
 .arrow:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .arrow-text {
@@ -210,11 +207,9 @@ html, body {
 
 .content-section {
     display: grid;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     min-height: 100vh;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: minmax(50%, 50%);
 }
 
 .content-text {
@@ -228,10 +223,9 @@ html, body {
     margin: 10px 0;
 }
 
-.last-section {
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: center;
+.content-section a {
+    padding-top: 1rem;
+    text-decoration: none;
 }
 
 .hidden {
@@ -369,11 +363,10 @@ html, body {
     color: white;
     font-size: 20px;
     font-family: 'Signika', sans-serif;
-    font-weight: bolder;
 }
 
 .para {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .text-lg {
@@ -412,7 +405,15 @@ html, body {
 }
 
 .blue {
-    background-color: teal;
+    background: linear-gradient(rgb(69, 161, 197), skyblue);
+}
+
+.purple {
+    background-color: #9900EF;
+}
+
+.dark {
+    background: linear-gradient(black, rgb(27, 27, 27))
 }
 
 .text-grey {
@@ -444,6 +445,13 @@ html, body {
 
 /* MEDIA QUERY */
 
+/*
+@media all and (max-width: 1200px) {
+    .container {
+        margin: 0 5%;
+    }
+}
+*/
 @media all and (max-width: 1000px) {
 
     .text {
